@@ -18,12 +18,25 @@ function miNombre($nombre){
             }
 
             header{
-                padding: 20px 5px;
+                padding: 20px 0px;
                 display: flex;
                 align-items: center;
                 justify-content: start;
                 background-color: #303030;
                 color: white;
+                width: 100%;
+            }
+
+            .imagen{
+                width: 100%;
+                margin-left: 40px;
+            }
+
+            .titulo{
+                display: flex;
+                justify-content: end;
+                width: 100%;
+                margin-right: 50px;
             }
 
             footer{
@@ -67,6 +80,7 @@ function miNombre($nombre){
                 font-size: 26px;
                 display: flex;
                 justify-content: center;
+                font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
             }
 
             .col2{
@@ -77,10 +91,10 @@ function miNombre($nombre){
     </head>
     <body>
         <header>
-            <div>
+            <div class="imagen">
                 <img src="https://www.fpllefia.com/images/logo40web.png" alt="imagen fpllefia">
             </div>
-            <div>
+            <div class="titulo">
                 <h1>Módulo 7 - Práctica 1. Mi primera aplicacion en PHP</h1>
             </div>
         </header>
