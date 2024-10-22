@@ -42,6 +42,12 @@ $pelicula = $_GET['pelicula'];
                             <div class="my-4 row justify-content-center text-dark">
                                 <div class="col-12 col-md-4">
                                     <img class="card w-100" src="' . $peliculas[$i]["imagen_url"] . '" alt="' . $peliculas[$i]["nombre"] . '">
+                                    <a class="text-decoration-none" href="./trailer.php?pelicula=' . $peliculas[$i]["nombre"] . '">
+                                        <div class="d-flex border border-dark mt-2 p-2 align-items-center justify-content-center" style="color: black">
+                                            <i class="fa-solid fa-circle-play"></i>
+                                            <div class="mx-2 font-weight-bold">TRAILER</div>
+                                        </div>
+                                    </a>
                                 </div>
                                 <div class="col-12 col-md-8">
                                 <p>' . $peliculas[$i]["sinopsis"] . '</p>

@@ -11,7 +11,7 @@ $peliculas = array(
         "reparto" => array("Cillian Murphy", "Emily Blunt", "Matt Damon", "Robert Downey Jr."),
         "calificacion" => "+16",
         "genero" => "Drama, Biografía",
-        "trailer_url" => "https://www.youtube.com/watch?v=bK6ldnjE3Y0",
+        "trailer_url" => "https://www.youtube.com/embed/bK6ldnjE3Y0?si=C6ExtBXSn4jAvl5q",
         "valoracion" => 4.7
     ),
     array(
@@ -24,7 +24,7 @@ $peliculas = array(
         "reparto" => array("Sam Worthington", "Zoe Saldaña", "Sigourney Weaver", "Kate Winslet"),
         "calificacion" => "+12",
         "genero" => "Ciencia ficción, Acción",
-        "trailer_url" => "https://www.youtube.com/watch?v=d9MyW72ELq0",
+        "trailer_url" => "https://www.youtube.com/embed/d9MyW72ELq0?si=kjtOnq6X47adYFxZ",
         "valoracion" => 4.0
     ),
     array(
@@ -37,7 +37,7 @@ $peliculas = array(
         "reparto" => array("Tom Holland", "Zendaya", "Benedict Cumberbatch", "Jacob Batalon"),
         "calificacion" => "+12",
         "genero" => "Acción, Superhéroes",
-        "trailer_url" => "https://www.youtube.com/watch?v=JfVOs4VSpmA",
+        "trailer_url" => "https://www.youtube.com/embed/JfVOs4VSpmA?si=HW_xzgpetCdgHZLb",
         "valoracion" => 4.5
     ),
     array(
@@ -50,7 +50,7 @@ $peliculas = array(
         "reparto" => array("Timothée Chalamet", "Rebecca Ferguson", "Oscar Isaac", "Zendaya"),
         "calificacion" => "+13",
         "genero" => "Ciencia ficción, Aventura",
-        "trailer_url" => "https://www.youtube.com/watch?v=8g18jFHCLXk",
+        "trailer_url" => "https://www.youtube.com/embed/8g18jFHCLXk?si=gizOOOV3o3fPjaln",
         "valoracion" => 4.4
     ),
     array(
@@ -63,7 +63,7 @@ $peliculas = array(
         "reparto" => array("Keanu Reeves", "Carrie-Anne Moss", "Yahya Abdul-Mateen II", "Jessica Henwick"),
         "calificacion" => "+16",
         "genero" => "Ciencia ficción, Acción",
-        "trailer_url" => "https://www.youtube.com/watch?v=9ix7TUGVYIo",
+        "trailer_url" => "https://www.youtube.com/embed/9ix7TUGVYIo?si=gsk9_pvlXUEjd9VM",
         "valoracion" => 3.8
     ),
     array(
@@ -76,7 +76,7 @@ $peliculas = array(
         "reparto" => array("Margot Robbie", "Idris Elba", "John Cena", "Joel Kinnaman"),
         "calificacion" => "+16",
         "genero" => "Acción, Superhéroes",
-        "trailer_url" => "https://www.youtube.com/watch?v=JuDLepNa7hw",
+        "trailer_url" => "https://www.youtube.com/embed/JuDLepNa7hw?si=qiBAmdTBI0RrO_C_",
         "valoracion" => 4.1
     ),
     array(
@@ -89,7 +89,7 @@ $peliculas = array(
         "reparto" => array("Daniel Craig", "Léa Seydoux", "Rami Malek", "Ralph Fiennes"),
         "calificacion" => "+13",
         "genero" => "Acción, Espionaje",
-        "trailer_url" => "https://www.youtube.com/watch?v=BIhNsAtPbPI",
+        "trailer_url" => "https://www.youtube.com/embed/BIhNsAtPbPI?si=NqOxFtF4xN1fNy8i",
         "valoracion" => 4.2
     ),
     array(
@@ -102,7 +102,7 @@ $peliculas = array(
         "reparto" => array("Stephanie Beatriz", "John Leguizamo", "Diane Guerrero", "Wilmer Valderrama"),
         "calificacion" => "ATP",
         "genero" => "Animación, Familia",
-        "trailer_url" => "https://www.youtube.com/watch?v=CaimKeDcudo",
+        "trailer_url" => "https://www.youtube.com/embed/CaimKeDcudo?si=-rX5e_Veob8bMNbE",
         "valoracion" => 4.6
     ),
     array(
@@ -115,7 +115,7 @@ $peliculas = array(
         "reparto" => array("Simu Liu", "Awkwafina", "Tony Leung", "Michelle Yeoh"),
         "calificacion" => "+13",
         "genero" => "Acción, Superhéroes",
-        "trailer_url" => "https://www.youtube.com/watch?v=8YjFbMbfXaQ",
+        "trailer_url" => "https://www.youtube.com/embed/8YjFbMbfXaQ?si=tjwFxOthgwF03A7X",
         "valoracion" => 4.3
     ),
     array(
@@ -128,7 +128,7 @@ $peliculas = array(
         "reparto" => array("Letitia Wright", "Lupita Nyong'o", "Danai Gurira", "Winston Duke"),
         "calificacion" => "+13",
         "genero" => "Acción, Superhéroes",
-        "trailer_url" => "https://www.youtube.com/watch?v=_Z3QKkl1WyM",
+        "trailer_url" => "https://www.youtube.com/embed/_Z3QKkl1WyM?si=jmUQm4VKLdMoY3UW",
         "valoracion" => 4.1
     )
 );
