@@ -5,130 +5,130 @@ $peliculas = array(
         "nombre" => "Oppenheimer",
         "imagen_url" => "https://pics.filmaffinity.com/Oppenheimer-828933592-large.jpg",
         "horarios" => array("14:00", "17:00", "20:00"),
-        "sinopsis" => "Una crónica de la vida del físico teórico J. Robert Oppenheimer y su papel en el desarrollo de la bomba atómica.",
+        "sinopsis" => "La película relata la vida de J. Robert Oppenheimer, el físico teórico cuya labor fue crucial para el desarrollo de la bomba atómica durante la Segunda Guerra Mundial. A través de su trabajo en el Proyecto Manhattan, Oppenheimer lidera un equipo de científicos que cambió la historia de la humanidad. Sin embargo, las repercusiones morales y personales de sus logros lo atormentan para siempre.",
         "duracion" => "180 minutos",
         "director" => "Christopher Nolan",
         "reparto" => array("Cillian Murphy", "Emily Blunt", "Matt Damon", "Robert Downey Jr."),
         "calificacion" => "+16",
         "genero" => "Drama, Biografía",
         "trailer_url" => "https://www.youtube.com/watch?v=bK6ldnjE3Y0",
-        "valoracion" => "4.7 / 5"
+        "valoracion" => 4.7
     ),
     array(
         "nombre" => "Avatar: El sentido del agua",
         "imagen_url" => "https://pics.filmaffinity.com/avatar_the_way_of_water-722646748-mmed.jpg",
         "horarios" => array("13:00", "16:30", "21:00"),
-        "sinopsis" => "Jake Sully y Neytiri forman una familia y hacen todo lo posible por mantenerse juntos. Sin embargo, deben abandonar su hogar y explorar las regiones de Pandora.",
+        "sinopsis" => "Ambientada más de una década después de los eventos de la primera película, Jake Sully y Neytiri han formado una familia en Pandora. Sin embargo, cuando una antigua amenaza regresa para acabar con su paz, los Sully deben abandonar su hogar y aventurarse en las profundidades de los océanos de Pandora. Allí, descubrirán nuevas especies y enfrentamientos que pondrán en riesgo todo lo que aman.",
         "duracion" => "192 minutos",
         "director" => "James Cameron",
         "reparto" => array("Sam Worthington", "Zoe Saldaña", "Sigourney Weaver", "Kate Winslet"),
         "calificacion" => "+12",
         "genero" => "Ciencia ficción, Acción",
         "trailer_url" => "https://www.youtube.com/watch?v=d9MyW72ELq0",
-        "valoracion" => "4.0 / 5"
+        "valoracion" => 4.0
     ),
     array(
         "nombre" => "Spider-Man: No Way Home",
         "imagen_url" => "https://pics.filmaffinity.com/Spider_Man_No_Way_Home-164964839-large.jpg",
         "horarios" => array("15:00", "18:30", "21:30"),
-        "sinopsis" => "Peter Parker busca la ayuda de Doctor Strange para hacer que el mundo olvide su identidad secreta, pero las cosas no salen como esperaba.",
+        "sinopsis" => "Después de que su identidad como Spider-Man fuera revelada al mundo, Peter Parker acude al Doctor Strange en busca de ayuda para hacer que todos olviden quién es en realidad. Sin embargo, el hechizo sale mal, lo que desata una grieta en el multiverso. Ahora, Peter deberá enfrentarse a villanos de diferentes dimensiones mientras lucha por proteger a sus seres queridos.",
         "duracion" => "148 minutos",
         "director" => "Jon Watts",
         "reparto" => array("Tom Holland", "Zendaya", "Benedict Cumberbatch", "Jacob Batalon"),
         "calificacion" => "+12",
         "genero" => "Acción, Superhéroes",
         "trailer_url" => "https://www.youtube.com/watch?v=JfVOs4VSpmA",
-        "valoracion" => "4.5 / 5"
+        "valoracion" => 4.5
     ),
     array(
         "nombre" => "Dune",
         "imagen_url" => "https://pics.filmaffinity.com/Dune-209834814-mmed.jpg",
         "horarios" => array("16:00", "19:00", "22:00"),
-        "sinopsis" => "Paul Atreides, un joven brillante y talentoso, debe viajar al planeta más peligroso del universo para asegurar el futuro de su familia y su pueblo.",
+        "sinopsis" => "En un futuro lejano, Paul Atreides, heredero de una poderosa familia noble, debe viajar al planeta desértico Arrakis, el único lugar donde se produce la especia, la sustancia más valiosa del universo. Enfrentado a traiciones y conspiraciones, Paul deberá aceptar su destino mientras lidia con fuerzas que pondrán a prueba su liderazgo y sus habilidades como guerrero.",
         "duracion" => "155 minutos",
         "director" => "Denis Villeneuve",
         "reparto" => array("Timothée Chalamet", "Rebecca Ferguson", "Oscar Isaac", "Zendaya"),
         "calificacion" => "+13",
         "genero" => "Ciencia ficción, Aventura",
         "trailer_url" => "https://www.youtube.com/watch?v=8g18jFHCLXk",
-        "valoracion" => "4.4 / 5"
+        "valoracion" => 4.4
     ),
     array(
         "nombre" => "Matrix Resurrections",
         "imagen_url" => "https://pics.filmaffinity.com/Matrix_Resurrections-864937945-large.jpg",
         "horarios" => array("13:30", "17:30", "21:30"),
-        "sinopsis" => "Neo vive una vida aparentemente normal, pero pronto descubre que su mundo no es lo que parece.",
+        "sinopsis" => "En un mundo donde lo real y lo virtual se mezclan, Neo, ahora conocido como Thomas Anderson, vive una vida aparentemente normal. Sin embargo, su realidad es sacudida cuando vuelve a cuestionarse todo lo que creía saber sobre su existencia y su papel en la resistencia contra las máquinas. Pronto, deberá enfrentarse nuevamente a antiguos enemigos y aliados.",
         "duracion" => "148 minutos",
         "director" => "Lana Wachowski",
         "reparto" => array("Keanu Reeves", "Carrie-Anne Moss", "Yahya Abdul-Mateen II", "Jessica Henwick"),
         "calificacion" => "+16",
         "genero" => "Ciencia ficción, Acción",
         "trailer_url" => "https://www.youtube.com/watch?v=9ix7TUGVYIo",
-        "valoracion" => "3.8 / 5"
+        "valoracion" => 3.8
     ),
     array(
         "nombre" => "El escuadrón suicida",
         "imagen_url" => "https://pics.filmaffinity.com/El_Escuadraon_Suicida-629689677-large.jpg",
         "horarios" => array("14:30", "18:00", "22:30"),
-        "sinopsis" => "Un grupo de supervillanos es enviado a una misión peligrosa en una isla controlada por el enemigo.",
+        "sinopsis" => "Un grupo de supervillanos encarcelados es reclutado por el gobierno para realizar misiones de alto riesgo a cambio de reducir sus sentencias. En su nueva misión, deben infiltrarse en una isla controlada por el enemigo, pero lo que comienza como una simple operación se convierte rápidamente en una caótica y violenta batalla por la supervivencia.",
         "duracion" => "132 minutos",
         "director" => "James Gunn",
         "reparto" => array("Margot Robbie", "Idris Elba", "John Cena", "Joel Kinnaman"),
         "calificacion" => "+16",
         "genero" => "Acción, Superhéroes",
         "trailer_url" => "https://www.youtube.com/watch?v=JuDLepNa7hw",
-        "valoracion" => "4.1 / 5"
+        "valoracion" => 4.1
     ),
     array(
         "nombre" => "No Time to Die",
         "imagen_url" => "https://pics.filmaffinity.com/Sin_tiempo_para_morir-525355918-large.jpg",
         "horarios" => array("15:30", "19:00", "22:30"),
-        "sinopsis" => "James Bond ha dejado el servicio activo, pero su paz se ve interrumpida cuando un viejo amigo de la CIA le pide ayuda.",
+        "sinopsis" => "Después de retirarse del servicio activo, James Bond vive una vida tranquila en Jamaica. Sin embargo, su paz se interrumpe cuando Felix Leiter, un viejo amigo de la CIA, le pide ayuda para encontrar a un científico desaparecido. La misión pondrá a Bond en una senda peligrosa, enfrentándolo a un enemigo poderoso y misterioso con una nueva arma tecnológica.",
         "duracion" => "163 minutos",
         "director" => "Cary Joji Fukunaga",
         "reparto" => array("Daniel Craig", "Léa Seydoux", "Rami Malek", "Ralph Fiennes"),
         "calificacion" => "+13",
         "genero" => "Acción, Espionaje",
         "trailer_url" => "https://www.youtube.com/watch?v=BIhNsAtPbPI",
-        "valoracion" => "4.2 / 5"
+        "valoracion" => 4.2
     ),
     array(
         "nombre" => "Encanto",
         "imagen_url" => "https://pics.filmaffinity.com/Encanto-246546841-large.jpg",
         "horarios" => array("12:00", "14:30", "17:00"),
-        "sinopsis" => "Una familia extraordinaria vive en una casa mágica en las montañas de Colombia.",
+        "sinopsis" => "En las montañas de Colombia, la familia Madrigal vive en una casa mágica en una ciudad encantada. Cada miembro de la familia ha sido bendecido con un don especial, excepto Mirabel. Cuando la magia que rodea su hogar comienza a desvanecerse, Mirabel se embarca en una aventura para salvar a su familia y descubrir su verdadero propósito.",
         "duracion" => "109 minutos",
         "director" => "Jared Bush, Byron Howard",
         "reparto" => array("Stephanie Beatriz", "John Leguizamo", "Diane Guerrero", "Wilmer Valderrama"),
         "calificacion" => "ATP",
         "genero" => "Animación, Familia",
         "trailer_url" => "https://www.youtube.com/watch?v=CaimKeDcudo",
-        "valoracion" => "4.6 / 5"
+        "valoracion" => 4.6
     ),
     array(
         "nombre" => "Shang-Chi y la leyenda de los diez anillos",
         "imagen_url" => "https://m.media-amazon.com/images/M/MV5BZmY5MDcyNzAtYzg3MC00MGNlLTg3OGItNmRjYThkZGVlNzAyXkEyXkFqcGc@._V1_.jpg",
         "horarios" => array("13:00", "16:30", "20:00"),
-        "sinopsis" => "Shang-Chi debe enfrentarse al pasado que pensaba haber dejado atrás cuando es arrastrado a la red de la misteriosa organización de los Diez Anillos.",
+        "sinopsis" => "Shang-Chi, maestro de las artes marciales, se enfrenta al pasado que dejó atrás cuando es arrastrado al misterioso mundo de la organización de los Diez Anillos. En su lucha por detener a su padre, el líder de la organización, Shang-Chi deberá lidiar con viejos fantasmas y descubrir su verdadero destino como guerrero.",
         "duracion" => "132 minutos",
         "director" => "Destin Daniel Cretton",
         "reparto" => array("Simu Liu", "Awkwafina", "Tony Leung", "Michelle Yeoh"),
         "calificacion" => "+13",
         "genero" => "Acción, Superhéroes",
         "trailer_url" => "https://www.youtube.com/watch?v=8YjFbMbfXaQ",
-        "valoracion" => "4.3 / 5"
+        "valoracion" => 4.3
     ),
     array(
         "nombre" => "Black Panther: Wakanda Forever",
         "imagen_url" => "https://pics.filmaffinity.com/Black_Panther_Wakanda_Forever-869269163-mmed.jpg",
         "horarios" => array("14:30", "18:00", "21:00"),
-        "sinopsis" => "Después de la muerte del Rey T'Challa, Wakanda lucha por protegerse de fuerzas externas mientras sus líderes buscan el camino hacia el futuro.",
+        "sinopsis" => "Tras la muerte del Rey T'Challa, los líderes de Wakanda luchan por proteger su reino de las amenazas externas mientras buscan el camino hacia el futuro. Sin la figura de su rey, el destino de la nación depende de nuevas alianzas y el surgimiento de un héroe inesperado que defenderá la herencia de Wakanda.",
         "duracion" => "161 minutos",
         "director" => "Ryan Coogler",
         "reparto" => array("Letitia Wright", "Lupita Nyong'o", "Danai Gurira", "Winston Duke"),
         "calificacion" => "+13",
         "genero" => "Acción, Superhéroes",
         "trailer_url" => "https://www.youtube.com/watch?v=_Z3QKkl1WyM",
-        "valoracion" => "4.1 / 5"
+        "valoracion" => 4.1
     )
 );
