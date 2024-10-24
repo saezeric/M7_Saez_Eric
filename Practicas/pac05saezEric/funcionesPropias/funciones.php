@@ -2,7 +2,7 @@
 
 function generarNombre($nombre)
 {
-    echo '<h1>Hola ' . $nombre . '!';
+    echo '<h1>Hola ' . $nombre . '!</h1>';
 }
 
 generarNombre("Eric Saez Escalona");
@@ -21,6 +21,7 @@ calcularTotal(30, 5, 21);
 function generarResumen($texto, $limite)
 {
     $res = substr($texto, 0, $limite);
+    echo '<br>' . $res . '';
 }
 
 generarResumen("Hola buenas tardes a todos los alumnos de FPLlefia", 10);
@@ -75,7 +76,15 @@ generarEnlaceDescarga("ia.png");
 function calcularDescuento($precioOriginal, $descuento)
 {
     $res = $precioOriginal - (($precioOriginal * $descuento) / 100);
-    echo '';
+    echo '<br>' . $res . '';
 }
 
 calcularDescuento(35, 5);
+
+function convertirHorasMinutos($horas)
+{
+    $res = $horas * 60;
+    echo '<br>' . $res . ' minutos';
+}
+
+convertirHorasMinutos(10);
