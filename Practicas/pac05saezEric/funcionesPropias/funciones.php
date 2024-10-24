@@ -1,86 +1,81 @@
 <?php
 
-if (isset($_POST["nombre"])) {
-    $nombre = $_POST["nombre"];
-}
-
 function generarNombre($nombre)
 {
     echo '<h1>Hola ' . $nombre . '!';
 }
 
-if (isset($_POST["precio"], $_POST["cantidad"], $_POST["impuesto"])) {
-    $precio = $_POST["precio"];
-    $cantidad = $_POST["cantidad"];
-    $impuesto = $_POST["impuesto"];
-}
+generarNombre("Eric Saez Escalona");
+
 
 function calcularTotal($precio, $cantidad, $impuesto)
 {
     $res = $precio + (($precio * $impuesto) / 100);
     $res = $res * $cantidad;
-    echo $res;
+    echo '<br>' . $res . '';
 }
 
-if (isset($_POST["texto"], $_POST["limite"])) {
-    $texto = $_POST["texto"];
-    $limite = $_POST["limite"];
-}
+calcularTotal(30, 5, 21);
+
 
 function generarResumen($texto, $limite)
 {
     $res = substr($texto, 0, $limite);
-    echo $res;
 }
 
-if (isset($_POST["temperatura"], $_POST["escala"])) {
-    $temperatura = $_POST["temperatura"];
-    $escala = $_POST["escala"];
-}
+generarResumen("Hola buenas tardes a todos los alumnos de FPLlefia", 10);
+
 
 function convertirTemperatura($temperatura, $escala)
 {
     if ($escala == "c" || $escala == "C") {
-        $temperatura = ($temperatura * 5) / 9 + 32;
-        echo $temperatura;
+        $temperatura = ($temperatura * 9 / 5) + 32;
+        $temperatura = number_format($temperatura, 0, '', ' ');
+        echo '<br>' . $temperatura . 'ºC';
     } else {
         $temperatura = ($temperatura - 32) * 5 / 9;
+        $temperatura = number_format($temperatura, 0, '', ' ');
+        echo '<br>' . $temperatura . 'ºF';
     }
 }
 
-if (isset($_POST["anio_nacimiento"])) {
-    $anio_nacimiento = $_POST["anio_nacimiento"];
-}
+convertirTemperatura(40, "f");
+
 
 function calcularEdad($anio_nacimiento)
 {
     $edad = 2024 - $anio_nacimiento;
-    echo $edad;
+    echo '<br>' . $edad . ' años';
 }
 
-if (isset($_POST["numero"])) {
-    $numero = $_POST["numero"];
-}
+calcularEdad(2004);
+
 
 function esPar($numero)
 {
     $par = $numero % 2;
     if ($par == 0) {
         $par = true;
+        echo '<br>' . $par . '';
     } else {
         $par = false;
-    }
-
-    if ($par == true) {
-        echo '' . $numero . ' es par';
-    } else {
-        echo '' . $numero . ' es impar';
+        echo '<br>' . $par . '';
     }
 }
 
-$archivo = "../downloads/practica5.pdf";
+esPar(34);
 
 function generarEnlaceDescarga($archivo)
 {
-    echo '<a href="' . $archivo . '"></a>';
+    echo '<br><a href="../downloads/' . $archivo . '" download>Descargar Archivo</a>';
 }
+
+generarEnlaceDescarga("ia.png");
+
+function calcularDescuento($precioOriginal, $descuento)
+{
+    $res = $precioOriginal - (($precioOriginal * $descuento) / 100);
+    echo '';
+}
+
+calcularDescuento(35, 5);
