@@ -1,11 +1,31 @@
 <?php
-
+session_start();
 
 // Verifica si el usuario ha iniciado sesión; si no, redirige a login.php.
 
+if (!isset($_SESSION['username']) || !isset($_SESSION['role']) || !isset($_SESSION['image'])) {
+    header('Location: ./login.php'); // Redirigir si no se ha iniciado sesión
+    exit;
+}
+
 // Verifica el rol del usuario
 
+$role = $_SESSION['role'];
+$vistaLector = "";
+$vistaAdmin = "";
+
+if ($role == "lector") {
+    $vistaLector = "d-none";
+} else {
+    $vistaAdmin = "d-none";
+}
+
 // Obtener la lista de libros desde la sesión
+
+include './libros.php';
+if (!isset($_SESSION['libros'])) {
+    $_SESSION['libros'] = $libros;
+}
 
 ?>
 
@@ -25,17 +45,17 @@
     <header class="bg-light py-3 mb-4 shadow-sm">
         <div class="container d-flex align-items-center justify-content-between">
             <div class="d-flex align-items-center">
-                <img src="aqui va la foto de perfil" alt="Foto de perfil" class="w-25 rounded-circle me-3">
+                <img src="<?= $_SESSION['image'] ?>" alt="Foto de perfil" class="rounded-circle me-3" style="width: 100px">
                 <div>
-                    <h4 class="m-0">👋 Bienvenido, AQUÍ VA EL USUARIO!</h4>
+                    <h4 class="m-0">👋 Bienvenido, <?= $_SESSION['username'] ?>!</h4>
                     <!-- SI ES ADMIN.... -->
-                    <p class="text-muted m-0"><i class="fas fa-user-shield text-success"></i> Admin ✏️</p>
+                    <p class="text-muted m-0 <?= $vistaLector ?>"><i class="fas fa-user-shield text-success"></i> Admin ✏️</p>
                     <!-- SINO.... -->
-                    <p class="text-muted m-0">Lector 📚</p>
+                    <p class="text-muted m-0 <?= $vistaAdmin ?>">Lector 📚</p>
 
                 </div>
             </div>
-            <a href="" class="btn btn-warning btn-sm">
+            <a href="logout.php" class="btn btn-warning btn-sm">
                 Cerrar sesión ❌
             </a>
         </div>
@@ -49,7 +69,7 @@
 
         <!-- Botón de agregar libro (solo visible para el admin) -->
 
-        <div class="text-center mb-4">
+        <div class="text-center mb-4 <?= $vistaLector ?>">
             <a href="add_edit_book.php" class="btn btn-outline-success btn-lg">
                 <i class="fas fa-plus-circle me-2"></i>Agregar Nuevo Libro
             </a>
@@ -59,28 +79,33 @@
         <!-- Mostrar lista de libros en un grid de tarjetas con tamaño uniforme -->
         <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
 
-            <div class="col">
-                <div class="card h-100 shadow-sm">
-                    <img src="" class="card-img-top" alt="" style="height: 400px; object-fit: cover;">
-                    <div class="card-body">
-                        <h5 class="card-title">TITULO</h5>
-                        <p class="card-text"><strong>Autor:</strong> AUTOR</p>
-                        <p class="card-text">DESCRIPCIÓN</p>
+            <?php
+            foreach ($_SESSION['libros'] as $libro) {
+                echo '
+                    <div class="col">
+                        <div class="card h-100 shadow-sm">
+                            <img src="' . $libro['imagen'] . '" class="card-img-top" alt="' . $libro['titulo'] . '" style="height: 400px; object-fit: cover;">
+                            <div class="card-body">
+                                <h5 class="card-title">' . $libro['titulo'] . '</h5>
+                                <p class="card-text"><strong>Autor:</strong> ' . $libro['autor'] . '</p>
+                                <p class="card-text">' . $libro['descripcion'] . '</p>
+                            </div>
+
+                            <!-- Botones de editar y eliminar (solo visible para el admin) -->
+                            <div class="card-footer d-flex justify-content-between">
+                                <a href="add_edit_book.php" class="btn btn-outline-primary btn-sm ' . $vistaLector . '">
+                                    <i class="fas fa-edit"></i> Editar
+                                </a>
+                                <a href="delete_book.php" class="btn btn-outline-danger btn-sm ' . $vistaLector . '">
+                                    <i class="fas fa-trash-alt"></i> Eliminar
+                                </a>
+                            </div>
+
+                        </div>
                     </div>
-
-                    <!-- Botones de editar y eliminar (solo visible para el admin) -->
-                    <div class="card-footer d-flex justify-content-between">
-                        <a href="" class="btn btn-outline-primary btn-sm">
-                            <i class="fas fa-edit"></i> Editar
-                        </a>
-                        <a href="" class="btn btn-outline-danger btn-sm">
-                            <i class="fas fa-trash-alt"></i> Eliminar
-                        </a>
-                    </div>
-
-                </div>
-            </div>
-
+                ';
+            }
+            ?>
         </div>
     </div>
 
