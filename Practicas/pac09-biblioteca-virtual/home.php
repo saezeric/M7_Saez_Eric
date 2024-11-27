@@ -92,11 +92,11 @@ if (!isset($_SESSION['libros'])) {
                             </div>
 
                             <!-- Botones de editar y eliminar (solo visible para el admin) -->
-                            <div class="card-footer d-flex justify-content-between">
-                                <a href="add_edit_book.php" class="btn btn-outline-primary btn-sm ' . $vistaLector . '">
+                            <div class="card-footer d-flex justify-content-between ' . $vistaLector . '">
+                                <a href="add_edit_book.php?id=' . $libro['id'] . '" class="btn btn-outline-primary btn-sm">
                                     <i class="fas fa-edit"></i> Editar
                                 </a>
-                                <a href="delete_book.php" class="btn btn-outline-danger btn-sm ' . $vistaLector . '">
+                                <a href="delete_book.php?id=' . $libro['id'] . '" class="btn btn-outline-danger btn-sm">
                                     <i class="fas fa-trash-alt"></i> Eliminar
                                 </a>
                             </div>

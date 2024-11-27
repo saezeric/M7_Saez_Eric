@@ -1,4 +1,32 @@
-<!-- AQUI VA LA LÓGICA PHP  -->
+<?php
+session_start();
+
+if (!isset($_SESSION['username']) || !isset($_SESSION['role']) || !isset($_SESSION['image'])) {
+    header('Location: ./login.php'); // Redirigir si no se ha iniciado sesión
+    exit;
+}
+
+if ($_SESSION['role'] == "lector") {
+    header('Location: ./home.php'); // Redirigir si no es admin
+    exit;
+}
+
+if (isset($_GET['id'])) {
+    $_SESSION['id'] = $_GET['id'];
+    $id = $_SESSION['id'];
+}
+
+foreach ($_SESSION['libros'] as $libro) {
+    if ($libro['id'] == $id) {
+        $titulo = $libro['titulo'];
+        $autor = $libro['autor'];
+        $imagen = $libro['imagen'];
+        $descripcion = $libro['descripcion'];
+    }
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="es">
 
@@ -14,8 +42,8 @@
     <header class="bg-light py-3 mb-4 shadow-sm">
         <div class="container d-flex align-items-center justify-content-between">
             <div>
-                <h4 class="m-0">👋 Bienvenido, NOMBRE DE USUARIO</h4>
-                <p class="text-muted m-0"><i class="fas fa-user-shield text-success"></i> ROL ADMIN O ROL LECTOR???</p>
+                <h4 class="m-0">👋 Bienvenido, <?= $_SESSION['username'] ?></h4>
+                <p class="text-muted m-0"><i class="fas fa-user-shield text-success"></i> <?= $_SESSION['role'] ?></p>
             </div>
             <a href="home.php" class="btn btn-secondary btn-sm">
                 <i class="fas fa-arrow-left"></i> Volver a la Biblioteca
@@ -30,25 +58,26 @@
         </div>
 
         <!-- Formulario para agregar o editar libro. DEPENDIENDO DE SI SE AÑADE O SE EDITA CAMBIARÁN COSA DEL FORMULARIO, USA TERNARIOS SON MUY ÚTILES-->
-        <form method="POST" class="mx-auto" style="max-width: 600px;">
+
+        <form method="POST" action="functions.php" class="mx-auto" style="max-width: 600px;">
             <div class="form-floating mb-3">
-                <input type="text" class="form-control" id="titulo" name="titulo" value="" placeholder="Título" required>
-                <label for="titulo">Título</label>
+                <input type="text" class="form-control" id="titulo" name="titulo" value="<?= $id ? $titulo : "" ?>" placeholder="Título" required>
+                <label for="titulo">Titulo</label>
             </div>
             <div class="form-floating mb-3">
-                <input type="text" class="form-control" id="autor" name="autor" value="" placeholder="Autor" required>
+                <input type="text" class="form-control" id="autor" name="autor" value="<?= $id ? $autor : "" ?>" placeholder="Autor" required>
                 <label for="autor">Autor</label>
             </div>
             <div class="form-floating mb-3">
-                <input type="text" class="form-control" id="imagen" name="imagen" value="" placeholder="URL de la Imagen">
+                <input type="text" class="form-control" id="imagen" name="imagen" value="<?= $id ? $imagen : "" ?>" placeholder="URL de la Imagen">
                 <label for="imagen">URL de la Imagen</label>
             </div>
             <div class="form-floating mb-4">
-                <textarea class="form-control" id="descripcion" name="descripcion" placeholder="Descripción" style="height: 150px;"><?= $descripcion ?></textarea>
+                <textarea class="form-control" id="descripcion" name="descripcion" placeholder="Descripción" style="height: 150px;"><?= $id ? $descripcion : "" ?></textarea>
                 <label for="descripcion">Descripción</label>
             </div>
             <div class="d-grid">
-                <button type="submit" class="btn btn-primary btn-lg"></button>
+                <button type="submit" class="btn btn-primary btn-lg"><?= $id ? "Editar" : "Añadir" ?></button>
             </div>
         </form>
     </div>
