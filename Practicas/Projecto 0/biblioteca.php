@@ -14,16 +14,32 @@ class Biblioteca
         ];
     }
 
-    public function addLibro(Libro $libro)
+    public function addLibro($titulo, $autor, $anioPublicacion, $foto)
     {
-        $this->libros[] = $libro;
+        $nuevoLibro = new Libro($titulo, $autor, $anioPublicacion, $foto);
+        $this->libros[] = $nuevoLibro;
     }
 
     public function mostrarLibros()
     {
-        $detalles = '<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6">';
+        $detalles = '<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6 justify-items-center">';
         foreach ($this->libros as $libro) {
             $detalles .= $libro->detalles();
+        }
+        $detalles .= '</div>';
+        return $detalles;
+    }
+
+    public function buscarLibro($busqueda){
+        $detalles = '<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6 justify-items-center">';
+        foreach ($this->libros as $libro) {
+            // stripos devuelve false si no encuentra la coincidencia
+            if (
+                stripos($libro->titulo, $busqueda) !== false ||
+                stripos($libro->autor, $busqueda) !== false
+            ) {
+                $detalles .= $libro->detalles(); // Mostrar la card del libro
+            }
         }
         $detalles .= '</div>';
         return $detalles;
