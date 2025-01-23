@@ -10,8 +10,7 @@ if (!isset($_SESSION['biblioteca'])) {
     $biblioteca = new Biblioteca();
     $_SESSION['biblioteca'] = serialize($biblioteca);
     $biblioteca = $_SESSION['biblioteca'];
-
-}else{
+} else {
     $biblioteca = unserialize($_SESSION['biblioteca']);
 }
 
